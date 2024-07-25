@@ -50,7 +50,7 @@ export default function HistoryAcordions() {
   };
 
   return (
-    <div>
+    <>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography>Collapsible Group Item #1</Typography>
@@ -90,6 +90,6 @@ export default function HistoryAcordions() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-    </div>
+    </>
   );
 }

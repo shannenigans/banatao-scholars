@@ -6,11 +6,12 @@ import MenuAppBar from './components/MenuAppBar';
 import History from './pages/History';
 import { PAGE_TITLE } from './constants/pages';
 import { Container } from '@mui/material';
+import BottomNav from './components/BottomNav';
 
 function App() {
-  const [ page, setPage ] = React.useState(PAGE_TITLE.SCHOLAR_DIRECTORY)
+  const [page, setPage] = React.useState(PAGE_TITLE.SCHOLAR_DIRECTORY)
   const getPage = (page) => {
-    switch(page) {
+    switch (page) {
       case PAGE_TITLE.HISTORY:
         return <History />
       default:
@@ -20,10 +21,13 @@ function App() {
   }
   return (
     <div className="App">
-      <MenuAppBar setPage={setPage}/>
-      <Container>
-        {getPage(page)}
-      </Container>
+      <div className='App-mainContent'>
+        <MenuAppBar setPage={setPage} />
+        <Container>
+          {getPage(page)}
+        </Container>
+      </div>
+      <BottomNav />
     </div>
   );
 }

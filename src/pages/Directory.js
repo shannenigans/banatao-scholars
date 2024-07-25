@@ -1,9 +1,10 @@
 import * as React from 'react';
 
+import { Search } from '@mui/icons-material';
 import { Box, Button, Container, TextField, Typography } from '@mui/material';
+
 import ScholarCard from '../components/ScholarCard';
 import ScholarTabs from '../components/ScholarTabs';
-import { Search } from '@mui/icons-material';
 
 import '../styles.scss';
 
@@ -13,7 +14,7 @@ export default function Directory() {
         <Container>
             <div className='directory'>
                 <div className='directory-filters'>
-                    <div className='scholar-tabs'>
+                    <div className='directory-tabs'>
                         <Typography className='directory-title' variant='h5' component='div'>Directory</Typography>
                         <ScholarTabs />
                     </div>

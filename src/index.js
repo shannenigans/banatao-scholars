@@ -3,11 +3,48 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createTheme, ThemeProvider } from '@mui/material';
 
+const theme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#8970b3',
+    },
+    secondary: {
+      main: '#673ab7',
+    },
+    background: {
+      default: '#fafafa',
+    },
+  },
+  typography: {
+    fontFamily: 'Roboto',
+  },
+  props: {
+    MuiList: {
+      dense: true,
+    },
+    MuiMenuItem: {
+      dense: true,
+    },
+    MuiTable: {
+      size: 'small',
+    },
+    MuiAppBar: {
+      color: 'transparent',
+    },
+  },
+  shape: {
+    borderRadius: 4,
+  },
+})
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

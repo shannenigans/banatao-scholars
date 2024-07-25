@@ -1,9 +1,29 @@
-.directory {
+.scholar-cards {
     display: flex;
     column-gap: 16px;
     row-gap: 16px;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.scholar-tabs {
+    display: flex;
+    column-gap: 8px;
+}
+
+.sort-filter {
+    align-self: center
+}
+
+.directory-filters {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px
+}
+
+.directory-title {
+    white-space: nowrap;
+    align-self: center;
 }
 
 .content {

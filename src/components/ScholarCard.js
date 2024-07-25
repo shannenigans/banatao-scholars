@@ -50,7 +50,7 @@ export default function ScholarCard() {
                         Class of '17
                     </Typography>
                     <Typography variant="body2" component="div">
-                        The University of Texas at Dallas, BS Computer Science '21
+                        The University of Texas at Dallas | BS Computer Science '21
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                         9093635565 | sbarrameda17@gmail.com

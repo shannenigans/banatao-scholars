@@ -38,9 +38,9 @@ export default function ScholarCard() {
                 <CardContent className='content'>
                     <CardMedia
                         sx={{ height: 100 }}
-                        image='../placeholder.jpg'
+                        image='../placeholder.jfif'
                     />
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h6" component="div">
                         Shannen Barrameda
                     </Typography>
                     <Typography variant="body1" component="div">
@@ -49,7 +49,7 @@ export default function ScholarCard() {
                     <Typography variant="body1" component="div">
                         Class of '17
                     </Typography>
-                    <Typography variant="body2" component="text.primary">
+                    <Typography variant="body2" component="div">
                         The University of Texas at Dallas, BS Computer Science '21
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
@@ -66,7 +66,7 @@ export default function ScholarCard() {
     }
 
     return (
-        <Card sx={{ maxWidth: 345, maxHeight: 400 }}>
+        <Card className='card' sx={{ maxWidth: 345, maxHeight: 400 }}>
             {getCardContents(showBio)}
         </Card>
     )

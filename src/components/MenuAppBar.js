@@ -5,28 +5,18 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = [
-  {
-    title: 'Scholar Directory'
-  },
-  {
-    title: 'History'
-  },
-  {
-    title: 'About the Asian Pacific Fund',
-    href: 'https://asianpacificfund.org/who-we-are/mission/'
-  }];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import { pages } from '../constants/pages';
+import { settings } from '../constants/settings';
 
-export default function MenuAppBar() {
+import philippinesIcon from '../assets/philippines.png';
+
+export default function MenuAppBar({ setPage }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -49,7 +39,7 @@ export default function MenuAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <img src={philippinesIcon} className='appbar-icon' sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -65,13 +55,12 @@ export default function MenuAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page.title}
-                onClick={handleCloseNavMenu}
+                onClick={() => { setPage(page.title)}}
                 href={page.href ? page.href : ''}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >

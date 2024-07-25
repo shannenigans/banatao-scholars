@@ -3,7 +3,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
-const labels = ['All', 'Departments', 'Class']
+const labels = ['All', 'Current', 'Departments', 'Class']
+
 export default function ScholarTabs() {
   const [value, setValue] = React.useState('All');
 

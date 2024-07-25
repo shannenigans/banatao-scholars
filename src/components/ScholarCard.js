@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Button, Card, CardMedia, CardActions, CardContent, Typography } from '@mui/material';
+import { ArrowBack, History } from '@mui/icons-material';
 /**
  * 
  * @returns class, name, school
@@ -28,8 +29,7 @@ export default function ScholarCard() {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small">Share</Button>
-                    <Button size="small" onClick={onLearnMoreClicked}>Learn More</Button>
+                    <Button size="small" startIcon={<ArrowBack />}onClick={onLearnMoreClicked}>Back</Button>
                 </CardActions>
             </>
         )
@@ -57,8 +57,7 @@ export default function ScholarCard() {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small">Share</Button>
-                    <Button size="small" onClick={onLearnMoreClicked}>Learn More</Button>
+                    <Button size="small" startIcon={<History />} onClick={onLearnMoreClicked}>Bio</Button>
                 </CardActions>
 
             </>
